@@ -1,0 +1,10 @@
+class Solution:
+    def removeDups(self, S):
+        seen=set()
+        St=list(S)
+        res=[]
+        for char in St:
+            if char not in seen:
+                seen.add(char)
+                res.append(char)
+        return ''.join(res)
