@@ -1,0 +1,12 @@
+class Solution:
+    #Function to find the leaders in the array.
+    def leaders(self, A, N):
+        maxel=A[N-1]
+        result=[maxel]
+        for i in range(N-2,-1,-1):
+            if A[i]>=maxel:
+                maxel=A[i]
+                result.append(maxel)
+        return result[::-1]
+            
+
