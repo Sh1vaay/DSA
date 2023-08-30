@@ -1,0 +1,6 @@
+
+class Solution:
+    def kthElement(self, arr1, arr2, n, m, k):
+        fin = arr1 + arr2
+        arr = sorted(fin)
+        return arr[k - 1]
