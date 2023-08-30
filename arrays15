@@ -1,0 +1,13 @@
+def isSubset(a1, a2, n, m):
+    freq = {}
+    for i in range(n):
+        if a1[i] in freq:
+            freq[a1[i]] += 1
+        else:
+            freq[a1[i]] = 1
+    for i in range(m):
+        if a2[i] not in freq or freq[a2[i]] == 0:
+            return "No"
+        else:
+            freq[a2[i]] -= 1
+    return "Yes"
