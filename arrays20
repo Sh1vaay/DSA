@@ -1,0 +1,9 @@
+def getMinMax( a, n):
+    minele=a[0]
+    maxele=a[0]
+    for ele in a:
+        if ele<minele:
+            minele=ele
+        if ele>maxele:
+            maxele=ele
+    return minele,maxele
