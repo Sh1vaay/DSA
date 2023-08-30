@@ -1,0 +1,12 @@
+class Solution:
+    
+    #Function to find the sum of contiguous subarray with maximum sum.
+    def maxSubArraySum(self,arr,N):
+        minn=0
+        runnsum=0
+        maxx=arr[0]
+        for i in range(len(arr)):
+            runnsum+=arr[i]
+            maxx=max(runnsum-minn,maxx)
+            minn=min(runnsum,minn)
+        return maxx
