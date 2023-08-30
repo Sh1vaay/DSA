@@ -1,0 +1,13 @@
+class Solution:
+    # Function to rearrange the array elements alternately.
+    def rearrange(self, arr, n):
+        l = 0
+        r = n - 1
+        ls = []
+        for i in range(n):
+            ls.append(arr[r])
+            ls.append(arr[l])
+            l += 1
+            r -= 1
+        for i in range(n):
+            arr[i] = ls[i]
